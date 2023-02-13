@@ -19,8 +19,7 @@ namespace ChuChat.DB
 
         public static Employee GetEmployee(string username, string password)
         {
-            var encryptedPassword = ComputeStringToSha256Hash(password);
-            return DbConnection.connection.Employee.FirstOrDefault(x => x.Name == username && x.Password == encryptedPassword);
+            return DbConnection.connection.Employee.FirstOrDefault(x => x.Username == username && x.Password == password);
         }
 
         public static List<ChatMessage> GetChatMessages() => DbConnection.connection.ChatMessage.ToList();

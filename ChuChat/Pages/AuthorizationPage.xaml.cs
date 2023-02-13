@@ -25,7 +25,7 @@ namespace ChuChat.Pages
                     Properties.Settings.Default.Username = App.Employee.Username;
                     Properties.Settings.Default.Save();
                 }
-                //NavigationService.Navigate(new Pages.ChatListPage());
+                NavigationService.Navigate(new Pages.ChatListPage());
             }
             else
                 MessageBox.Show("Unknown username or password");
